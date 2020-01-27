@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+.app {
+    margin: 50px auto;
+}
+
+.card-game {
+    border: 5px solid blue;
+    padding: 20px;
+    position: relative;
+}
+
+.snake-buttons {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.btn {
+    background: #76d1f3;
+    border: 0 none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 8px 24px;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #4d99b5;
+}
+
+.card {
+    background-color: #ccc;
+    border: 2px solid #fff;
+    flex: 0 0 25%;
+    height: 100px;
+    text-align: center;
+    line-height:100px;
+}
+
+.button-card {
+    border: 0 none;
+    cursor: pointer;
+    display: inline-block;
+    height: 200px;
+    padding: 0;
+    position: relative;
+    transition: 1s;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    width: 150px;
+}
+
+.button-card + .button-card {
+    margin-left: 20px;
+}
+
+.button-card.flip {
+    transform: rotateY(180deg);
+}
+
+.button-card__part {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    backface-visibility: hidden;
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.button-card__part-back {
+    transform: rotateY(180deg);
+}
